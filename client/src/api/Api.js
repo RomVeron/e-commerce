@@ -1,9 +1,7 @@
-import React from 'react'
+import axios from "axios"
 
-const Api = () => {
-  return (
-    <div>Api</div>
-  )
+export async function productsData(){
+    const products = await axios.get("https://fakestoreapiserver.reactbd.com/products");
+
+    return products;
 }
-
-export default Api
